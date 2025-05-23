@@ -23,7 +23,8 @@ Saves the trained model (log_classifier.joblib) for future inference.
 
 Uses a Large Language Model (e.g., deepseek-r1-distill-llama-70b) via the Groq API.
 Classifies complex/unstructured logs into categories like Workflow Error or Deprecation Warning using prompts and pattern matching.
-3. processor_bert.py
+
+## 3. processor_bert.py
 
 Loads the trained sentence embedding model and the Logistic Regression classifier.
 Provides a function classify_with_bert() to predict log categories.
@@ -43,25 +44,29 @@ Regex first, then ML fallback for other sources.
 Contains classify_csv() to process a CSV and save classified output.
 
 # 📂 Example Usage
-python clarify.py
+
+  clasify.py
+  
 Processes test.csv logs and outputs output.csv with classified labels.
 
-✅ Features
+# ✅ Features
 Hybrid classification logic combining Regex, BERT + Logistic Regression, and LLM fallback.
 Modular components with fallback hierarchy.
 Handles edge cases and noisy log entries robustly.
 Built-in clustering to explore log groups.
 Easily extendable for other models and data sources.
-📦 Requirements
+# 📦 Requirements
 Python 3.8+
 sentence-transformers, scikit-learn, pandas, joblib, dotenv, groq
-📈 Example Labels
+
+# 📈 Example Labels
 User Action
 System Notification
 Workflow Error
 Deprecation Warning
 Unclassified
-📑 Folder Structure (Suggested)
+
+# 📑 Folder Structure (Suggested)
 ├── training.py
 ├── process.py
 ├── process_bart.py
