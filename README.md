@@ -1,13 +1,13 @@
- Intelligent Log Classification System
+ # Intelligent Log Classification System
 
-📌 Overview
+# 📌 Overview
 This project implements a hybrid log classification system that combines rule-based, machine learning, and large language model (LLM) techniques to accurately classify system and application log messages into predefined categories.
 
-🎯 Objectives
+# 🎯 Objectives
 Automatically classify log messages from various sources such as CRM systems and APIs.
 Improve classification accuracy using regex, BERT-based ML, and LLMs for fallback.
 Support easy integration and model extensibility for production pipelines.
-🧠 Components
+# 🧠 Components
 1. training.py
 
 Reads a CSV dataset of synthetic logs.
